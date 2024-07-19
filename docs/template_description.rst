@@ -20,7 +20,7 @@ The plugin template skeleton has the following structure:
     ├── LICENSE  (*a copy of the selected license*)
     ├── MANIFEST.in
     ├── <project_slug>
-    │   ├── <importer_name>.py
+    │   ├── <postprocessor_name>.py
     │   └── __init__.py
     ├── README.rst
     ├── requirements_dev.txt
@@ -28,7 +28,7 @@ The plugin template skeleton has the following structure:
     ├── setup.py
     ├── tests
     │   ├── __init__.py
-    │   └── test_pysteps_<importer_name>.py
+    │   └── test_pysteps_<postprocessor_name>.py
     └── tox.ini
 
 
@@ -36,7 +36,7 @@ Project name (<project_name>)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For the project name, it is recommended using the following convention:
-**pysteps-importer-<institution short name>**.
+**pysteps-postprocessor-<postprocessor name>**.
 Note that this convention is not strictly needed, and any name can be used.
 
 
@@ -48,26 +48,26 @@ Package name (<project slug>)
     <project_name>
     └── <project_slug>
 
-This is the name of our package containing the new importers for pysteps. The package
+This is the name of our package containing the new postprocessors for pysteps. The package
 name should not contain spaces, hyphens, or uppercase letters. The same naming
 convention as the package name is recommended. Note that the package name should be
 Python import friendly (no spaces, no hyphens, and no special characters).
 
 
-Importer module (<importer_name>)
+Postprocessor module (<postprocessor_name>)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
     <project_name>
-    └── <project_slug>pysteps-importer-abc
-            ├── <importer_name>.py
+    └── <project_slug>pysteps-postprocessor-xxx
+            ├── <postprocessor_name>.py
             └── __init__.py
 
-Name of the module implementing the new importers.
-The module's name must start with `importer_` prefix. This is strictly needed for the
+Name of the module implementing the new postprocessors.
+The module's name must start with `postprocessor_` prefix. This is strictly needed for the
 pysteps interface to work correctly.
-The <importer_name>.py
+The <postprocessor_name>.py
 
 README
 ~~~~~~
@@ -185,7 +185,7 @@ Tests
     <project_name>
     └── tests
     │    ├── __init__.py
-    │    └── test_pysteps_<importer_name>.py
+    │    └── test_pysteps_<postprocessor_name>.py
     └── tox.ini (optional)
 
 
