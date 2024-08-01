@@ -20,7 +20,7 @@ source_encoding = 'utf-8'
 master_doc = 'index'
 
 # General information about the project.
-project = 'cookiecutter-pysteps-postprocessing-plugin'
+project = 'cookiecutter-pysteps-diagnostics-plugin'
 copyright = '2024, Pysteps developers'
 author = 'Pysteps developers'
 

@@ -45,7 +45,7 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     include_package_data=True,
-    keywords=['{{ cookiecutter.project_slug }}', 'pysteps' , 'plugin', 'importer'],
+    keywords=['{{ cookiecutter.project_slug }}', 'pysteps' , 'plugin', 'diagnostics'],
     name='{{ cookiecutter.project_name }}',
     packages=find_packages(),
     setup_requires=setup_requirements,
@@ -60,14 +60,14 @@ setup(
     #
     # An entry point is defined by three properties:
     # - The group that an entry point belongs indicate the kind of functionality that
-    #   provides. For the pysteps postprocessors use the "pysteps.plugins.postprocessors" group.
+    #   provides. For the pysteps diagnostic postprocessors use the "pysteps.plugins.diagnostics" group.
     # - The unique name that is used to identify this entry point in the
-    #   "pysteps.plugins.postprocessors" group.
-    # - A reference to a Python object. For the pysteps postprocessors, the object should
+    #   "pysteps.plugins.diagnostics" group.
+    # - A reference to a Python object. For the pysteps diagnostics postprocessors, the object should
     #   point to a postprocessor function, and should have the following form:
     #   package_name.module:function.
     # The setup script uses a dictionary mapping the entry point group names to a list
-    # of strings defining the postprocessors provided by this package (our plugin).
+    # of strings defining the diagnostic postprocessors provided by this package (our plugin).
     # The general form of the entry points dictionary is:
     # entry_points={
     #     "group_name": [
@@ -76,9 +76,9 @@ setup(
     #     ]
     # },
     entry_points={
-        'pysteps.plugins.postprocessors': [
-            '{{cookiecutter.postprocessor_name }}_xxx={{ cookiecutter.project_slug }}.{{ cookiecutter.postprocessor_name }}:{{cookiecutter.postprocessor_name }}_xxx',
-            # Add additional postprocessors if needed.
+        'pysteps.plugins.diagnostics': [
+            '{{cookiecutter.diagnostic_name }}_xxx={{ cookiecutter.project_slug }}.{{ cookiecutter.diagnostic_name }}:{{cookiecutter.diagnostic_name }}_xxx',
+            # Add additional diagnostic postprocessors if needed.
         ]
     },
     version='{{ cookiecutter.version }}',
