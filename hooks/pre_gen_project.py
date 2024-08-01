@@ -13,7 +13,7 @@ if not re.match(MODULE_REGEX, module_name):
     # Exit to cancel project
     sys.exit(1)
 
-importer_name = '{{ cookiecutter.postprocessor_name}}'
-if not postprocessor_name.startswith("postprocessor_"):
-    print('\nERROR: The postprocessor_name must start with the "postprocessor_" prefix')
+diagnostic_name = '{{ cookiecutter.diagnostic_name}}'
+if not diagnostic_name.startswith("diagnostic_"):
+    print('\nERROR: The diagnostic_name must start with the "diagnostic_" prefix')
     sys.exit(1)
